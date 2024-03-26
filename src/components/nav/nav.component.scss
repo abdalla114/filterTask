@@ -1,0 +1,19 @@
+.activv{
+    background-color: #5180F6 !important;
+    color: white !important;
+    border-radius: .5rem;
+}
+li a{
+    border-radius: .5rem;
+}
+.navbar-brand{
+    color: #6D91EE;
+}
+nav{
+    font-family: navFont;
+}
+@media screen and (max-width:991.5px) {
+    nav ul li{
+        text-align: center;
+    }
+}

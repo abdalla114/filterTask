@@ -1,0 +1,21 @@
+<div class="d-flex justify-content-center my-5"><h1 class="text-center title"><span class="sp1"></span>Testymonials<span class="sp2"></span></h1></div>
+
+<div class="container">
+    <div class="row g-3 mt-4">
+        @for (item of [1,2,3,4]; track $index) {
+            <div class="col-md-6">
+     
+               <div class="d-flex body p-4">
+                <div class="col-md-2 col-lg-2"><img src="../../assets/woman.png" class="" alt=""></div>
+                <div class="col-md-8 col-lg-8">
+                    <h2 class="titlle">Courtney Henry</h2>
+                   <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+                   @for (item of [1,2,3,4]; track $index) {
+                    <i class="fa-solid fa-star me-3 mt-1"></i>
+                   }
+               </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

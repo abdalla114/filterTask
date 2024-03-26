@@ -1,0 +1,56 @@
+<div class="d-flex justify-content-center mb-5"><h1 class="text-center title"><span class="sp1"></span>Contact Us<span class="sp2"></span></h1></div>
+<div class="container ">
+    <div class="row w-75 mx-auto align-items-center g-3 overflow-auto mt-3">
+        <div class="col-md-8">
+            <!-- <form action="">
+                <div class="position-relative">
+                    <label class="text-black label1">Name</label>
+                    <input type="text" id="name" class="form-control mt-2 rounded-pill pt-3">
+                </div>
+                <div class="position-relative">
+                    <label class=" text-black label1">Email</label>
+                    <input type="email" id="email" class="form-control mt-2 rounded-pill pt-3">
+                </div>
+                <div class="position-relative">
+                    <label class="text-black label1">Phone</label>
+                    <input type="tel" id="phone" class="form-control mt-2 rounded-pill pt-3">
+                </div>
+                <button class="btn bg-transparent d-block mx-auto mt-3 rounded-pill px-4">Send</button>
+            </form> -->
+            <form class="example-form d-flex flex-column justify-content-between" [formGroup]="signupForm" (ngSubmit)="signup()">
+                <mat-form-field class="example-full-width" appearance="outline">
+                  <mat-label>Name</mat-label>
+                  <input formControlName="name" matInput placeholder="Full Name">
+                  @if (signupForm.get('name')?.getError('required')) {
+                    <mat-error>Name is <strong>required</strong></mat-error>
+                  }
+                </mat-form-field>
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input formGroupName="email" type="email" matInput formControlName="email" placeholder="Ex. pat@example.com">
+                    @if (signupForm.get('email')?.getError('email') && !signupForm.get('email')?.getError('required')) {
+                      <mat-error>Please enter a valid email address</mat-error>
+                    }
+                    @if (signupForm.get('email')?.getError('required')) {
+                      <mat-error>Email is <strong>required</strong></mat-error>
+                    }
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Telephone</mat-label>
+                    <span matTextPrefix>+2 &nbsp;</span>
+                    <input formControlName="phone" type="tel" matInput placeholder="01062417381">
+                    <mat-icon matSuffix>mode_edit</mat-icon>
+                    @if (signupForm.get('phone')?.getError('required')) {
+                      <mat-error>Phones is <strong>required</strong></mat-error>
+                    }
+                  </mat-form-field>
+                  <button class="btn bg-transparent d-block mx-auto rounded-pill px-4">Send</button>
+              </form>
+        </div>
+        <div class="col-md-4">
+          <p><i class="fa-solid fa-envelope me-2"></i><span>{{mail}}</span></p>
+          <p><i class="fa-solid fa-phone me-2"></i><span>+201154932137</span></p>
+        </div>
+    </div>
+</div>
+  
