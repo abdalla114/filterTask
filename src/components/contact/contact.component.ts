@@ -39,7 +39,7 @@ export class ContactComponent {
       next:(res:any)=>{
         let a = res.message
         console.log(res);
-        this._ToastrService.success(a)
+        this._ToastrService.success('email added successfully')
       },
       error:(err)=>{
         console.log(err);
